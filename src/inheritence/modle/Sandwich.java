@@ -1,4 +1,4 @@
-package inheritence.view;
+package inheritence.modle;
 
 public abstract class Sandwich
 {
