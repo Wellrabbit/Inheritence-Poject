@@ -1,6 +1,6 @@
 package inheritence.modle;
 
-public abstract class Sandwich
+public abstract class Sandwich implements FoodInterface
 {
  private int numberOfCalories;
  private String mainIngredient;

@@ -6,16 +6,26 @@ public class InheritenceController
 {
 	
 	private InheritenceFrame baseFrame;
-	private InheritenceController baseController;
+	
 	
 	
 	public InheritenceController()
 	{
 		baseFrame = new InheritenceFrame(this);
-		this.baseController = baseController;
+		
 	}
- public void start()
+ 
+public void start()
  {
 	 
  }
+
+public InheritenceFrame getBaseFrame()
+{
+	return baseFrame;
+}
+public void setBaseFrame(InheritenceFrame baseFrame)
+{
+	this.baseFrame = baseFrame;
+}
 }
