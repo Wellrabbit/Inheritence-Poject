@@ -1,10 +1,11 @@
 package inheritence.modle;
 
-public abstract class Sandwich implements FoodInterface
+public abstract class Sandwich implements food
 {
- private int numberOfCalories;
+ public int numberOfCalories;
  private String mainIngredient;
  private boolean isCold;
+ 
  
 public int getNumberOfCalories()
 {
@@ -22,12 +23,34 @@ public void setMainIngrediant(String mainIngredient)
 {
 	this.mainIngredient = mainIngredient;
 }
-public boolean isCold()
+public boolean getisCold()
 {
 	return isCold;
 }
 public void setCold(boolean isCold)
 {
 	this.isCold = isCold;
+}
+public int compareTo(Object compared)
+{
+	int comparedValue = Integer.MIN_VALUE;
+	if(compared instanceof food)
+	{
+		if(this.calorieCounter(this.numberOfCalories) < ((food) compared).calorieCounter(this.numberOfCalories)) 
+		{
+			comparedValue = -1;
+		}
+		else if(this.calorieCounter(this.numberOfCalories)> ((food) compared).calorieCounter(this.numberOfCalories))
+		{
+			comparedValue = 1;
+		}
+	}
+	return comparedValue;
+}
+
+public String toString()
+{
+	String sandwitchDescription = "This sandwich is " + getMainIngredient() + "and is cold" + getisCold() + "and has " + getNumberOfCalories() +" Calories ";
+	return sandwitchDescription;
 }
 }

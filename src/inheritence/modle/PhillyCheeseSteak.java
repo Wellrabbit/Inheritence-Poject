@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class PhillyCheeseSteak extends Sandwich
 {
+	int Calories;
+	int stars;
+	private String name;
 	ArrayList<String> containsList;
 	public PhillyCheeseSteak()
 	{
@@ -12,8 +15,9 @@ public class PhillyCheeseSteak extends Sandwich
 		this.setCold(false);
 		containsList = new ArrayList<String>();
 		setupContainsList();
-		int Calories = getNumberOfCalories();
-		int stars = 4;
+		 Calories = getNumberOfCalories();
+		 stars = 4;
+		 name = "Philly Cheese Steak";
 	}
 	private void setupContainsList()
 	{
@@ -75,5 +79,29 @@ public class PhillyCheeseSteak extends Sandwich
 	public void setContainsList(ArrayList<String> containsList)
 	{
 		this.containsList = containsList;
+	}
+	public int getCalories()
+	{
+		return Calories;
+	}
+	public void setCalories(int calories)
+	{
+		Calories = calories;
+	}
+	public int getStars()
+	{
+		return stars;
+	}
+	public void setStars(int stars)
+	{
+		this.stars = stars;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
 	}
 }

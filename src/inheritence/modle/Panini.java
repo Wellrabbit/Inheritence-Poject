@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Panini extends Sandwich
 {
+	private int Calories;
+	private int stars;
+	private String name;
 	private ArrayList<String> containsList;
 	public Panini()
 	{
@@ -12,8 +15,9 @@ public class Panini extends Sandwich
 		this.setCold(false);
 		containsList = new ArrayList<String>();
 		setupContainsList();
-		int Calories = getNumberOfCalories();
-		int stars = 4;
+		Calories = numberOfCalories;
+		stars = 4;
+		name = "Panini";
 	}
 private void setupContainsList()
 {
@@ -58,7 +62,7 @@ private void setupContainsList()
 	@Override
 	public int calorieCounter(int Calories)
 	{
-		return Calories;
+		return this.Calories;
 	}
 
 	@Override
@@ -75,5 +79,35 @@ private void setupContainsList()
 	public void setContainsList(ArrayList<String> containsList)
 	{
 		this.containsList = containsList;
+	}
+	@Override
+	public int compareTo(Object thing)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public int getCalories()
+	{
+		return Calories;
+	}
+	public void setCalories(int calories)
+	{
+		Calories = calories;
+	}
+	public int getStars()
+	{
+		return stars;
+	}
+	public void setStars(int stars)
+	{
+		this.stars = stars;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
 	}
 }
